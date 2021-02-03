@@ -1,6 +1,6 @@
-{
+﻿{
 	"GLOBAL": {
-		"GPL": "<div style='color: #666;'>글자로 놀자! 끄투 온라인 Copyright (C) {년도} {배포자}({이메일 등})<br>이 프로그램은 제품에 대한 어떠한 형태의 보증도 제공되지 않습니다.<br>이 프로그램은 자유 소프트웨어이며 배포 규정을 만족시키는 조건 아래 자유롭게 재배포할 수 있습니다.<br>이에 대한 자세한 사항은 본 프로그램의 구현을 담은 다음 레포지토리에서 확인하십시오: <a target='_blank' href='{이 서버의 소스 코드 위치}'>{이 서버의 소스 코드 위치}</a></div>",
+		"GPL": "<div style='color: #666;'>글자로 놀자! 카카오 네트워크 Copyright (C) 2021 카카오(kakaonetwork.flex@gmail.com)<br>이 프로그램은 제품에 대한 어떠한 형태의 보증도 제공되지 않습니다.<br>이 프로그램은 자유 소프트웨어이며 배포 규정을 만족시키는 조건 아래 자유롭게 재배포할 수 있습니다.<br>이에 대한 자세한 사항은 본 프로그램의 구현을 담은 다음 레포지토리에서 확인하십시오: <a target='_blank' href='https://github.com/kakaonetwork/KKuTu'>https://github.com/kakaonetwork/KKuTu</a></div>",
 
 		"CREATOR":	"개발자 블로그",
 		"HOME":		"FA{home}",
@@ -87,6 +87,7 @@
 		"GROUP_BDG2": "희귀 휘장",
 		"GROUP_BDG3": "고급 휘장",
 		"GROUP_BDG4": "일반 휘장",
+		"GROUP_Mdeck": "모레미 장식",
 		"GROUP_Mhead": "모레미 머리",
 		"GROUP_Meye": "모레미 눈",
 		"GROUP_Mmouth": "모레미 입",
@@ -108,7 +109,6 @@
 	"login": {
 		"title": "로그인",
 		"loginWith": "로그인 방법을 선택하세요.",
-		"withDaldalso": "달달소 아이디로 로그인",
 		"withNaver": "네이버 아이디로 로그인",
 		"withFacebook": "페이스북 아이디로 로그인",
 		"withGoogle": "구글 아이디로 로그인",
@@ -128,7 +128,7 @@
 		"login": "로그인"
 	},
 	"kkutu": {
-		"title": "글자로 놀자! 끄투 온라인",
+		"title": " ",
 		"version": "2.5.1",
 		
 		"meta_desc": "온라인 끝말잇기, 앞말잇기, 자음퀴즈, 십자말풀이, 타자 대결까지! 끄투에서 어휘력의 제왕이 되어 보세요.",
@@ -161,9 +161,7 @@
 		"serverEnter": "접속",
 		
 		"websocketUnsupport": "본 게임은 Internet Explorer(10), 크롬(16), 파이어폭스(11), 오페라(12.1), 사파리(6) 이상의 버전에서 지원합니다!<br>브라우저를 업데이트해 주세요.",
-		"dictionarySupport": "사전 정보 제공:<a href='http://wordnet.princeton.edu' target='_blank'>WordNet</a><br><label style='color: #777777;'>WordNet 3.0 Copyright 2006 by Princeton University. All rights reserved.</label>",
 		"sandbox": "샌드박스 :: SDBX",
-		"etcSupport": "도움:<a href='http://cafe.naver.com/sdbx' target='_blank'>샌드박스 :: SDBX</a>",
 		"welcome": "환영합니다.",
 		"welcomeTestServer": "테스트 서버에 접속했습니다. 본 서버는 특별한 공지 없이 폭발하거나 닫힐 수 있습니다.",
 		"loadRemain": "불러오는 중... 앞으로 ",
@@ -393,6 +391,14 @@
 		"theme_KMV": "한국 영화",
 		"theme_HDC": "함대 컬렉션",
 		"theme_HOS": "히어로즈 오브 더 스톰",
+		"theme_WBT": "웹툰",
+		"theme_BRS": "브롤스타즈",
+		"theme_EPN": "에버플래닛",
+		"theme_UTL": "언더테일",
+		"theme_RUN": "쿠키런",
+		"theme_JBL": "비쥬얼 노벨",
+		"theme_THP": "동방 프로젝트",
+		"theme_DRM": "도라에몽",
 		
 		"class_1": "명",
 		"class_2": "대명",
@@ -443,7 +449,7 @@
 		"theme_120": "기독교",
 		"theme_130": "논리",
 		"theme_140": "농업",
-		"theme_150": "문학",
+		"theme_150": "문학/소설",
 		"theme_160": "물리",
 		"theme_170": "미술",
 		"theme_180": "민속",
@@ -536,6 +542,8 @@
 		"sureConsume": "정말 이 항목을 사용합니까?",
 		
 		"dress": "프로필 관리",
+		"myNickname": "나의 닉네임",
+		"myNicknameX": "10글자 이내 특수문자 및 공백 금지",
 		"myExordial": "소개 한마디",
 		"myExordialX": "100글자 이내",
 		"myMoremi": "내 모레미",
@@ -543,6 +551,7 @@
 		"category_spec": "특수",
 		"category_skin": "스킨",
 		"category_badge": "휘장",
+		"category_deck": "장식",
 		"category_head": "머리",
 		"category_eye": "눈",
 		"category_mouth": "입",
@@ -612,6 +621,7 @@
 		"friendAdd": "친구 추가",
 		"friendSureRemove": "이 친구를 정말 삭제합니까? 삭제하는 경우 상대방의 친구 목록에서도 회원님이 빠지게 됩니다.",
 		"newRoom": "방 만들기",
+		"newRoom2": " ",
 		"setRoom": "방 설정",
 		"quickRoom": "빠른 입장",
 		"quickStatus": "해당 유형의 방 수:",

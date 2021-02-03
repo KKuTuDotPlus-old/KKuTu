@@ -47,6 +47,9 @@
 .x-gm .users-name::before{ content: "[GM]"; color: #2F77D9; text-shadow: 0px 0px 2px #2AF; }
 .chat-item>.x-gm::before{ content: "[GM]"; color: #2F77D9; text-shadow: 0px 0px 2px #2AF; }
 .room-user-title>.x-gm::before{ content: "[GM]"; color: #2F77D9; text-shadow: 0px 0px 2px #2AF; }
+.x-yt .users-name::before{ content: "[YT]"; color: red; text-shadow: 0px 0px 2px red; }
+.chat-item>.x-yt::before{ content: "[YT]"; color: red; text-shadow: 0px 0px 2px red; }
+.room-user-title>.x-dotori::before{ content: "[YT]"; color: red; text-shadow: 0px 0px 2px red; }
 
 .x-red_name{ color: #FF3333; }
 .x-orange_name{ color: #FFA533; }
@@ -55,3 +58,5 @@
 .x-indigo_name{ color: #1C18B9; }
 .x-purple_name{ color: #A939CC; }
 .x-pink_name{ color: #F15F9A; }
+.x-mint_name{ color: #00ffbf; }
+.x-yellow_name{ color: #fffb00; }

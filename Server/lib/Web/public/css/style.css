@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Rule the words! KKuTu Online
  * Copyright (C) 2017 JJoriping(op@jjo.kr)
  * 
@@ -287,10 +287,6 @@ span{
 	color: #444444;
 	font-size: 11px;
 	text-align: center;
-}
-.bottom-legal{
-	margin-top: 10px;
-	color: #CCCCCC;
 }
 	.bottom-legal a{ padding: 0px 5px; }
 .bottom-contact{

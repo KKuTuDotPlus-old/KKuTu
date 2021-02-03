@@ -1,4 +1,4 @@
-//-
+﻿//-
 	Rule the words! KKuTu Online
 	Copyright (C) 2017 JJoriping(op@jjo.kr)
 	
@@ -38,7 +38,7 @@ mixin SettingOption(id, text, st)
 		label(for=id)= text
 
 block Subject
-	title= L('title')
+	title= '카카오 네트워크 - 글자로 놀자! 끄투 온라인'
 
 block JS
 	script(type='text/javascript', src='/js/in_game_kkutu.min.js')
@@ -349,7 +349,10 @@ block Middle
 			h4.dialog-bar-value#replay-players -
 		div.dialog-bar.tail-button
 			button#replay-view= L('replayView')
-	+Dialog('DressDiag', 600, 280, L('dress'))
+	+Dialog('DressDiag', 600, 310, L('dress'))
+		div.dialog-bar
+			h4(style='width: 150px;')= L('myNickname')
+			input#dress-nickname(type='textfield', placeholder=L('myNicknameX'), style='width: 435px;', maxlength=10)
 		div.dialog-bar
 			h4(style='width: 150px;')= L('myExordial')
 			input#dress-exordial(type='textfield', placeholder=L('myExordialX'), style='width: 435px;', maxlength=100)
@@ -452,7 +455,3 @@ block Middle
 		input#Talk(maxlength=200)
 		button#ChatBtn= L('send')
 	+Product('AD')
-
-block Bottom
-	div.bottom-legal!= L('dictionarySupport')
-	div.bottom-legal!= L('etcSupport')

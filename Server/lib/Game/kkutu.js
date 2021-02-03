@@ -174,6 +174,7 @@ exports.Data = function(data){
 	this.playTime = data.playTime || 0;
 	this.connectDate = data.connectDate || 0;
 	this.record = {};
+	this.nickname = data.nickname || null;
 	for(i in Const.GAME_TYPE){
 		this.record[j = Const.GAME_TYPE[i]] = data.record ? (data.record[Const.GAME_TYPE[i]] || [0, 0, 0, 0]) : [0, 0, 0, 0];
 		if(!this.record[j][3]) this.record[j][3] = 0;
@@ -242,7 +243,8 @@ exports.Client = function(socket, profile, sid){
 		};
 	}
 	my.socket = socket;
-	my.place = 0;
+	my.place = 0
+	my.nickname = null;
 	my.team = 0;
 	my.ready = false;
 	my.game = {};
@@ -324,6 +326,7 @@ exports.Client = function(socket, profile, sid){
 			o.place = my.place;
 			o.data = my.data;
 			o.money = my.money;
+			o.nickname = my.nickname;
 			o.equip = my.equip;
 			o.exordial = my.exordial;
 		}
@@ -443,6 +446,8 @@ exports.Client = function(socket, profile, sid){
 			my.box = $user.box || {};
 			my.data = new exports.Data($user.kkutu);
 			my.money = Number($user.money);
+			my.nickname = $user.nickname || undefined;
+			if(my.nickname) my.profile.title = my.nickname;
 			my.friends = $user.friends || {};
 			if(first) my.flush();
 			else{
@@ -1373,7 +1378,7 @@ function getGuestName(sid){
 	for(i=0; i<len; i++){
 		res += sid.charCodeAt(i) * (i+1);
 	}
-	return "GUEST" + (1000 + (res % 9000));
+	return "손님" + (1000 + (res % 9000));
 }
 function shuffle(arr){
 	var i, r = [];
@@ -1438,6 +1443,7 @@ function getRewards(mode, score, bonus, rank, all, ss){
 	rw.score = rw.score
 		* (0.77 + 0.05 * (all - rank) * (all - rank)) // 순위
 		* 1.25 / (1 + 1.25 * sr * sr) // 점차비(양학했을 수록 ↓)
+		* 3
 	;
 	rw.money = 1 + rw.score * 0.01;
 	if(all < 2){

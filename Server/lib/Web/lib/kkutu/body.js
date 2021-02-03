@@ -233,6 +233,7 @@ function onMessage(data){
 			$data.place = 0;
 			$data.friends = data.friends;
 			$data._friends = {};
+			$data.nickname = data.nickname;
 			$data._playTime = data.playTime;
 			$data._okg = data.okg;
 			$data._gaming = false;
@@ -2489,6 +2490,13 @@ function getLevel(score){
 	return i+1;
 }
 function getLevelImage(score){
+	if(score < 0){
+		return $("<div>").css({
+			'float': "left",
+			"background-image": "url('/img/kkutu/lv/levelgm.png')",
+			'background-size': "100%"
+		});
+	}
 	var lv = getLevel(score) - 1;
 	var lX = (lv % 25) * -100;
 	var lY = Math.floor(lv * 0.04) * -100;

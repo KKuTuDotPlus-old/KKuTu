@@ -45,13 +45,14 @@ exports.OPTIONS = {
 exports.MOREMI_PART = [ 'back', 'eye', 'mouth', 'shoes', 'clothes', 'head', 'lhand', 'rhand', 'front' ];
 exports.CATEGORIES = [ "all", "spec", "skin", "badge", "head", "eye", "mouth", "clothes", "hs", "back" ];
 exports.AVAIL_EQUIP = [
-	"NIK", "BDG1", "BDG2", "BDG3", "BDG4",
+	"NIK", "BDG1", "BDG2", "BDG3", "BDG4", "Mdeck",
 	"Mhead", "Meye", "Mmouth", "Mhand", "Mclothes", "Mshoes", "Mback"
 ];
 exports.GROUPS = {
 	'spec': [ "PIX", "PIY", "PIZ", "CNS" ],
 	'skin': [ "NIK" ],
 	'badge': [ "BDG1", "BDG2", "BDG3", "BDG4" ],
+	'deck' : [ "Mdeck" ],
 	'head': [ "Mhead" ],
 	'eye': [ "Meye" ],
 	'mouth': [ "Mmouth" ],
@@ -206,7 +207,8 @@ exports.KO_INJEONG = [
 	"MOB", "HYK", "CYP", "HRH", "STA", "OIJ",
 	"KGR", "ESB", "ELW", "OIM", "OVW", "NEX", /*"WOW",*/
 	"YRY", "KPO", "JLN", "JAN", "ZEL", "POK", "HAI",
-	"HSS", "KMV", "HDC", "HOS"
+	"HSS", "KMV", "HDC", "HOS", "WBT", "BRS", "EPN",
+	"UTL", "RUN", "JBN", "THP", "DRM"
 ];
 exports.EN_INJEONG = [
 	"LOL"
