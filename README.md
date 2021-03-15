@@ -1,17 +1,15 @@
-# KKuTu
-- Made by [JJoriping](http://blog.jjo.kr/)
-- Special thanks to
-	* [샌드박스 :: SDBX](http://cafe.naver.com/sdbx)
-	* [SWMaestro](http://www.swmaestro.kr)
-	* You to have interested in this repository :)
-- [KKuTu Wiki](https://github.com/JJoriping/KKuTu/wiki)
-- [프리 서버 목록](http://jjo.kr/kkutu)
-- Languages
-	* [한국어](#한국어)
-	* [English](#english)
+# 끄투닷플러스
+- 원작자 깃허브 [JJoriping](http://blog.jjo.kr/)
+- 바로 가기
+	* [KKuTuDotPlus](https://kkutu.plus)
+	* [DesignSupport](https://kkutu.plus/designSupport.html)
+	* [Discord](https://discord.gg/k9wJkQmKvY)
+## 알립니다
+- 끄투닷플러스의 허가 없이 이 레포지토리를 참고,사용하거나 리소스를 사용하지 마세요.
+	* 끄투닷플러스에서 무료로 제공하는 리소스 다운로드 : [DesignSupport](https://kkutu.plus/designSupport.html)
 
 ## 한국어
-> 글자로 놀자! 끄투 온라인
+**글자에 즐거움을 더합니다. 끄투닷플러스**
 
 **끄투**는 여러분의 어휘력을 발휘할 수 있는 다양한 단어 게임들이 모여 있는 캐주얼 게임입니다.
 로봇과 혼자서 게임을 할 수도 있고, 서버에 접속해 있는 다른 사람들과 함께 할 수도 있죠.
@@ -57,7 +55,7 @@
 	- 다만 본 레포지토리에서 제공하는 소스 코드로 끄투 서비스를 운영하기 위해 이들을 사용하는 경우 저작자 표시(BY)를 생략할 수 있습니다.
 
 ## English
-> Rule the words! KKuTu Online
+> Rule the words! KKuTuDotPlus
 
 **KKuTu** is a casual game containing various word games that let players use their vocabulary.
 Players can play alone with a robot, or play with other players who have entered to a server.
