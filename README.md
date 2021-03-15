@@ -1,10 +1,11 @@
 # 끄투닷플러스
-- 원작자 깃허브 [JJoriping](http://blog.jjo.kr/)
-- 바로 가기
+- ⚙️ 원작자 깃허브 :
+	* [JJoriping](http://blog.jjo.kr/)
+- 🌎 바로 가기 :
 	* [KKuTuDotPlus](https://kkutu.plus)
 	* [DesignSupport](https://kkutu.plus/designSupport.html)
 	* [Discord](https://discord.gg/k9wJkQmKvY)
-## 알립니다
+## ⚠️ 알립니다 !
 - 끄투닷플러스의 허가 없이 이 레포지토리를 참고,사용하거나 리소스를 사용하지 마세요.
 	* 끄투닷플러스에서 무료로 제공하는 리소스 다운로드 : [DesignSupport](https://kkutu.plus/designSupport.html)
 
