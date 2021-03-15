@@ -76,16 +76,17 @@ block Middle
 			div
 				table
 					thead: tr
-						td #
-						td money
-						td kkutu
-						td box
-						td equip
-						td exordial
-						td server
-						td lastLogin
-						td black
-						td friends
+						td 아이디
+						td 보유한 핑
+						td 전적
+						td 인벤토리
+						td 장착 중인 아이템
+						td 별명
+						td 소개 한마디
+						td 접속 중인 서버
+						td 최근 로그인
+						td 정지 사유
+						td 친구
 					tbody#user-data
 			button#user-apply 적용
 	fieldset
@@ -126,9 +127,3 @@ block Middle
 			input#db-theme(placeholder='주제 (~부터 적으면 검색)')
 			textarea#db-list(rows=20, cols=100)
 			button#db-ok 확인
-	fieldset
-		legend 끄투에서의 인기 단어
-		button#kpw-query 조회
-		textarea#kpw-html
-		div#kpw-table
-		button#kpw-flush 반영

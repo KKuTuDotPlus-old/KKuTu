@@ -45,7 +45,7 @@ $(document).ready(function(){
 			userList: $(".UserListBox .product-body"),
 			roomListTitle: $(".RoomListBox .product-title"),
 			roomList: $(".RoomListBox .product-body"),
-			createBanner: $("<div>").addClass("rooms-item rooms-create").append($("<div>").html(L['newRoom']))
+			createBanner: $("<div>").addClass("rooms-item rooms-create").append($("<div>").html(L['newRoom2']))
 		},
 		chat: $("#Chat"),
 		chatLog: $("#chat-log-board"),
@@ -69,7 +69,8 @@ $(document).ready(function(){
 			exit: $("#ExitBtn"),
 			notice: $("#NoticeBtn"),
 			replay: $("#ReplayBtn"),
-			leaderboard: $("#LeaderboardBtn")
+			leaderboard: $("#LeaderboardBtn"),
+			noticeview: $("#NoticeviewBtn")
 		},
 		dialog: {
 			setting: $("#SettingDiag"),
@@ -621,8 +622,8 @@ $(document).ready(function(){
 	});
 	$stage.dialog.settingOK.on('click', function(e){
 		applyOptions({
-			mb: $("#mute-bgm").is(":checked"),
-			me: $("#mute-effect").is(":checked"),
+			vb: $("#vol-bgm").val(),
+			ve: $("#vol-eff").val(),
 			di: $("#deny-invite").is(":checked"),
 			dw: $("#deny-whisper").is(":checked"),
 			df: $("#deny-friend").is(":checked"),
@@ -786,11 +787,10 @@ $(document).ready(function(){
 		});
 	});
 	$stage.dialog.dressOK.on('click', function(e){
-		$(e.currentTarget).attr('disabled', true);
-		$.post("/exordial", { data: $("#dress-exordial").val() }, function(res){
+		$.post("/updateMe", { nickname: badWords($("#dress-nickname").val()), exordial: $("#dress-exordial").val() }, function(res){
 			$stage.dialog.dressOK.attr('disabled', false);
 			if(res.error) return fail(res.error);
-			
+			alert('수정 사항이 잘 반영되었습니다. 새로고침 시 적용됩니다.')
 			$stage.dialog.dress.hide();
 		});
 	});
@@ -941,8 +941,13 @@ $(document).ready(function(){
 			}
 		};
 	});
+	
 	$stage.dialog.replayView.on('click', function(e){
 		replayReady();
+	});
+	
+	$('#vol-bgm').on('input', function() {
+		$data.bgm.gN.gain.value = $('#vol-bgm').val();
 	});
 	
 // 스팸

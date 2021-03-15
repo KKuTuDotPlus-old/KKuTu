@@ -48,7 +48,7 @@ var Language = {
 };
 //볕뉘 수정
 var ROUTES = [
-	"major", "consume", "admin", "login"
+	"major", "consume", "admin", "login", "word"
 ];
 //볕뉘 수정 끝
 var page = WebInit.page;

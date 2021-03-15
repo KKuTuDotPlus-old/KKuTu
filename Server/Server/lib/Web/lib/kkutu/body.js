@@ -64,11 +64,11 @@ function showDialog($d, noToggle){
 function applyOptions(opt){
 	$data.opts = opt;
 	
-	$data.muteBGM = $data.opts.mb;
-	$data.muteEff = $data.opts.me;
+	$data.volBGM = $data.opts.vb;
+	$data.volEff = $data.opts.ve;
 	
-	$("#mute-bgm").attr('checked', $data.muteBGM);
-	$("#mute-effect").attr('checked', $data.muteEff);
+	$("#vol-bgm").val($data.volBGM);
+	$("#vol-eff").val($data.volEff);
 	$("#deny-invite").attr('checked', $data.opts.di);
 	$("#deny-whisper").attr('checked', $data.opts.dw);
 	$("#deny-friend").attr('checked', $data.opts.df);
@@ -78,13 +78,8 @@ function applyOptions(opt){
 	$("#only-unlock").attr('checked', $data.opts.ou);
 	
 	if($data.bgm){
-		if($data.muteBGM){
-			$data.bgm.volume = 0;
-			$data.bgm.stop();
-		}else{
-			$data.bgm.volume = 1;
-			$data.bgm = playBGM($data.bgm.key, true);
-		}
+		$data.bgm.gN.gain.value = $data.volBGM;
+		$data.bgm = playBGM($data.bgm.key, true);
 	}
 }
 function checkInput(){
@@ -233,6 +228,7 @@ function onMessage(data){
 			$data.place = 0;
 			$data.friends = data.friends;
 			$data._friends = {};
+			$data.nickname = data.nickname;
 			$data._playTime = data.playTime;
 			$data._okg = data.okg;
 			$data._gaming = false;
@@ -964,6 +960,10 @@ function userListBar(o, forInvite){
 function addonNickname($R, o){
 	if(o.equip['NIK']) $R.addClass("x-" + o.equip['NIK']);
 	if(o.equip['BDG'] == "b1_gm") $R.addClass("x-gm");
+	if(o.equip['BDG'] == "b1_yt") $R.addClass("x-yt");
+	if(o.equip['BDG'] == "b1_ad") $R.addClass("x-admin");
+	if(o.equip['BDG'] == "b1_tw") $R.addClass("x-tw");
+	if(o.equip['BDG'] == "b1_pt") $R.addClass("x-pt");
 }
 function updateRoomList(refresh){
 	var i;
@@ -1229,6 +1229,7 @@ function drawMyDress(avGroup){
 	renderMoremi($view, my.equip);
 	$(".dress-type.selected").removeClass("selected");
 	$("#dress-type-all").addClass("selected");
+	$("#dress-nickname").val(my.nickname);
 	$("#dress-exordial").val(my.exordial);
 	drawMyGoods(avGroup || true);
 }
@@ -1556,7 +1557,7 @@ function requestProfile(id){
 		.append($("<div>").addClass("profile-head-item")
 			.append(getImage(o.profile.image).addClass("profile-image"))
 			.append($("<div>").addClass("profile-title ellipse").html(o.profile.title || o.profile.name)
-				.append($("<label>").addClass("profile-tag").html(" #" + o.id.toString().substr(0, 5)))
+				.append($("<label>").addClass("profile-tag").html(" #" + o.id.toString().substr(0, 30)))
 			)
 		)
 		.append($("<div>").addClass("profile-head-item")
@@ -1750,7 +1751,7 @@ function replayPrev(e){
 	to = $data._rf - 1;
 	replayPrevInit();
 	c = $data.muteEff;
-	$data.muteEff = true;
+	$data.volEff = 0;
 	for(i=0; i<to; i++){
 		replayTick();
 	}
@@ -2489,6 +2490,13 @@ function getLevel(score){
 	return i+1;
 }
 function getLevelImage(score){
+	if(score < 0){
+		return $("<div>").css({
+			'float': "left",
+			"background-image": "url('/img/kkutu/lv/levelgm.png')",
+			'background-size': "100%"
+		});
+	}
 	var lv = getLevel(score) - 1;
 	var lX = (lv % 25) * -100;
 	var lY = Math.floor(lv * 0.04) * -100;
@@ -2579,6 +2587,7 @@ function getAudio(k, url, cb){
 	req.send();
 }
 function playBGM(key, force){
+	if (force) return $data.bgm;
 	if($data.bgm) $data.bgm.stop();
 	
 	return $data.bgm = playSound(key, true);
@@ -2591,10 +2600,15 @@ function stopBGM(){
 }
 function playSound(key, loop){
 	var src, sound;
-	var mute = (loop && $data.muteBGM) || (!loop && $data.muteEff);
+	var mute = (loop && !$data.volBGM) || (!loop && !$data.volEff);
+	var volume = (loop ? $data.volBGM : $data.volEff)
 	
 	sound = $sound[key] || $sound.missing;
 	if(window.hasOwnProperty("AudioBuffer") && sound instanceof AudioBuffer){
+		var gN = audioContext.createGain();
+		gN.gain.value = volume || 0;
+		gN.connect(audioContext.destination);
+
 		src = audioContext.createBufferSource();
 		src.startedAt = audioContext.currentTime;
 		src.loop = loop;
@@ -2604,10 +2618,12 @@ function playSound(key, loop){
 			src.buffer = sound;
 		}
 		src.connect(audioContext.destination);
+		src.connect(gN);
+		src.gN = gN;
 	}else{
 		if(sound.readyState) sound.audio.currentTime = 0;
 		sound.audio.loop = loop || false;
-		sound.audio.volume = mute ? 0 : 1;
+		sound.audio.volume = mute ? 0 : volume;
 		src = sound;
 	}
 	if($_sound[key]) $_sound[key].stop();
@@ -2690,11 +2706,11 @@ function chat(profile, msg, from, timestamp){
 		$bar = ($data.room.gaming ? 2 : 0) + ($(".jjoriping").hasClass("cw") ? 1 : 0);
 		chatBalloon(msg, profile.id, $bar);
 	}
-	$stage.chat.append($item = $("<div>").addClass("chat-item")
-		.append($bar = $("<div>").addClass("chat-head ellipse").text(profile.title || profile.name))
-		.append($msg = $("<div>").addClass("chat-body").text(msg))
-		.append($("<div>").addClass("chat-stamp").text(time.toLocaleTimeString()))
-	);
+	$stage.chat.append($item = $("<div>").addClass("chat-item") 
+	.append($bar = $("<div>").addClass("chat-head ellipse").text(profile.title || profile.name)) 
+	.append($msg = equip.BDG === "b1_gm"|| equip.BDG === 'b1_ad'?$("<div>").addClass("chat-body").html(msg):$("<div>").addClass("chat-body").text(msg)) 
+	.append($("<div>").addClass("chat-stamp").text(time.toLocaleTimeString())) 
+); 
 	if(timestamp) $bar.prepend($("<i>").addClass("fa fa-video-camera"));
 	$bar.on('click', function(e){
 		requestProfile(profile.id);

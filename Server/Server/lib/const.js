@@ -40,18 +40,22 @@ exports.OPTIONS = {
 	'prv': { name: "Proverb" },
 	'str': { name: "Strict" },
 	'k32': { name: "Sami" },
-	'no2': { name: "No2" }
+	'no2': { name: "No2" },
+	'uwd': { name: "UnknownWord" },
+	'rtn': { name: "Returns" },
+	'rtu': { name: "RandomTurn" }
 };
-exports.MOREMI_PART = [ 'back', 'eye', 'mouth', 'shoes', 'clothes', 'head', 'lhand', 'rhand', 'front' ];
-exports.CATEGORIES = [ "all", "spec", "skin", "badge", "head", "eye", "mouth", "clothes", "hs", "back" ];
+exports.MOREMI_PART = [ 'back', 'eye', 'mouth', 'shoes', 'decke', 'clothes', 'head', 'deckh', 'lhand', 'rhand', 'front' ];
+exports.CATEGORIES = [ "all", "spec", "skin", "badge", "deck", "head", "eye", "mouth", "clothes", "hs", "back" ];
 exports.AVAIL_EQUIP = [
 	"NIK", "BDG1", "BDG2", "BDG3", "BDG4",
-	"Mhead", "Meye", "Mmouth", "Mhand", "Mclothes", "Mshoes", "Mback"
+	"Mhand", "Mdeckh", "Mhead", "Meye", "Mmouth", "Mclothes", "Mdecke", "Mshoes", "Mback"
 ];
 exports.GROUPS = {
 	'spec': [ "PIX", "PIY", "PIZ", "CNS" ],
 	'skin': [ "NIK" ],
 	'badge': [ "BDG1", "BDG2", "BDG3", "BDG4" ],
+	'deck' : [ "Mdeckh", "Mdecke" ],
 	'head': [ "Mhead" ],
 	'eye': [ "Meye" ],
 	'mouth': [ "Mmouth" ],
@@ -88,7 +92,7 @@ exports.RULE = {
 	},
 	'KKT': { lang: "ko",
 		rule: "Classic",
-		opts: [ "man", "ext", "mis", "loa", "str", "k32" ],
+		opts: [ "man", "ext", "mis", "loa", "str", "k32","rtn" ],
 		time: 1,
 		ai: true,
 		big: false,
@@ -96,7 +100,7 @@ exports.RULE = {
 	},
 	'KSH': { lang: "ko",
 		rule: "Classic",
-		opts: [ "man", "ext", "mis", "loa", "str" ],
+		opts: [ "man", "ext", "mis", "loa", "str","rtn","uwd" ],
 		time: 1,
 		ai: true,
 		big: false,
@@ -206,10 +210,11 @@ exports.KO_INJEONG = [
 	"MOB", "HYK", "CYP", "HRH", "STA", "OIJ",
 	"KGR", "ESB", "ELW", "OIM", "OVW", "NEX", /*"WOW",*/
 	"YRY", "KPO", "JLN", "JAN", "ZEL", "POK", "HAI",
-	"HSS", "KMV", "HDC", "HOS"
+	"HSS", "KMV", "HDC", "HOS", "WBT", "BRS", "EPN",
+	"UTL", "RUN", "JBN", "THP", "DRM", "RDD", "KKT"
 ];
 exports.EN_INJEONG = [
-	"LOL"
+	"LOL", "KOT"
 ];
 exports.KO_THEME = [
 	"30", "40", "60", "80", "90",

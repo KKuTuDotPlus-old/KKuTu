@@ -22,6 +22,7 @@
 	padding: 3px;
 	width: 240px;
 	height: 50px;
+	background-color: #e6e6e6;
 	box-shadow: 0px 1px 1px #777777;
 	cursor: pointer;
 }
@@ -44,9 +45,21 @@
 	}
 
 /* NIK */
-.x-gm .users-name::before{ content: "[GM]"; color: #2F77D9; text-shadow: 0px 0px 2px #2AF; }
-.chat-item>.x-gm::before{ content: "[GM]"; color: #2F77D9; text-shadow: 0px 0px 2px #2AF; }
-.room-user-title>.x-gm::before{ content: "[GM]"; color: #2F77D9; text-shadow: 0px 0px 2px #2AF; }
+.x-gm .users-name::before{ content: "[운영자]"; color: #2F77D9; text-shadow: 0px 0px 2px #2AF; }
+.chat-item>.x-gm::before{ content: "[운영자]"; color: #2F77D9; text-shadow: 0px 0px 2px #2AF; }
+.room-user-title>.x-gm::before{ content: "[운영자]"; color: #2F77D9; text-shadow: 0px 0px 2px #2AF; }
+.x-yt .users-name::before{ content: "[유튜버]"; color: red; text-shadow: 0px 0px 2px red; }
+.chat-item>.x-yt::before{ content: "[유튜버]"; color: red; text-shadow: 0px 0px 2px red; }
+.room-user-title>.x-yt::before{ content: "[유튜버]"; color: red; text-shadow: 0px 0px 2px red; }
+.x-admin .users-name::before{ content: "[대표]"; color: rgb(255, 150, 0); text-shadow: 0px 0px 2px rgb(255, 150, 0); }
+.chat-item>.x-admin::before{ content: "[대표]"; color: rgb(255, 150, 0); text-shadow: 0px 0px 2px rgb(255, 150, 0); }
+.room-user-title>.x-admin::before{ content: "[대표]"; color: rgb(255, 150, 0); text-shadow: 0px 0px 2px rgb(255, 150, 0); }
+.x-tw .users-name::before{ content: "[스트리머]"; color: rgb(150, 0, 255); text-shadow: 0px 0px 2px rgb(150, 0, 255); }
+.chat-item>.x-tw::before{ content: "[스트리머]"; color: rgb(150, 0, 255); text-shadow: 0px 0px 2px rgb(150, 0, 255); }
+.room-user-title>.x-tw::before{ content: "[스트리머]"; color: rgb(150, 0, 255); text-shadow: 0px 0px 2px rgb(150, 0, 255); }
+.x-pt .users-name::before{ content: "[파트너]"; color: rgb(27, 201, 36); text-shadow: 0px 0px 2px rgb(27, 201, 36); }
+.chat-item>.x-pt::before{ content: "[파트너]"; color: rgb(27, 201, 36); text-shadow: 0px 0px 2px rgb(27, 201, 36); }
+.room-user-title>.x-pt::before{ content: "[파트너]"; color: rgb(27, 201, 36); text-shadow: 0px 0px 2px rgb(27, 201, 36); }
 
 .x-red_name{ color: #FF3333; }
 .x-orange_name{ color: #FFA533; }
@@ -55,3 +68,5 @@
 .x-indigo_name{ color: #1C18B9; }
 .x-purple_name{ color: #A939CC; }
 .x-pink_name{ color: #F15F9A; }
+.x-mint_name{ color: #00ffb3; }
+.x-yellow_name{ color: #fffb00; }

@@ -23,7 +23,7 @@ include module
 doctype html
 html
 	head
-		title= L('title')
+		title= '카카오 네트워크 로그인'
 		+PageHead()
 	body
 		span#locale= JSON.stringify(LANG)
@@ -34,4 +34,4 @@ html
 			a(href="/login/" + val.vendor)
 				button(style="color: " + val.fontColor + "; background-color: " + val.color + ";")= L(val.displayName)
 		//볕뉘 수정 끝
-		div.login-legal!= L('loginLegal')
+		div.login-legal!= '카카오 네트워크에 로그인하면 <a href="https://discord.gg/J2Awrt7JJj" target="_blank">이용약관</a>과 SNS 관련 개인정보 수집에 동의하게 됩니다.'

@@ -1,2 +1,93 @@
 This is an error log file of the game server.
 You may use like `tail -f KKUTU_ERROR.log` to watch this.
+:8496 [2021-2-6 21:25:06] ERROR: TypeError: Cannot read property 'rankgame' of undefined
+TypeError: Cannot read property 'rankgame' of undefined
+    at getRewards (C:\Users\kakaonetwork\Desktop\KKuTu-master\Server\lib\Game\kkutu.js:1473:11)
+    at exports.Room.my.roundEnd (C:\Users\kakaonetwork\Desktop\KKuTu-master\Server\lib\Game\kkutu.js:1218:9)
+    at exports.Room.my.go (C:\Users\kakaonetwork\Desktop\KKuTu-master\Server\lib\Game\kkutu.js:962:10)
+    at exports.Client.my.leave (C:\Users\kakaonetwork\Desktop\KKuTu-master\Server\lib\Game\kkutu.js:606:19)
+    at Object.KKuTu.onClientMessage (C:\Users\kakaonetwork\Desktop\KKuTu-master\Server\lib\Game\slave.js:271:7)
+    at WebSocket.<anonymous> (C:\Users\kakaonetwork\Desktop\KKuTu-master\Server\lib\Game\kkutu.js:297:11)
+    at WebSocket.emit (events.js:210:5)
+    at Receiver._receiver.onmessage (C:\Users\kakaonetwork\Desktop\KKuTu-master\Server\lib\node_modules\ws\lib\WebSocket.js:141:47)
+    at Receiver.dataMessage (C:\Users\kakaonetwork\Desktop\KKuTu-master\Server\lib\node_modules\ws\lib\Receiver.js:389:14)
+    at Receiver.getData (C:\Users\kakaonetwork\Desktop\KKuTu-master\Server\lib\node_modules\ws\lib\Receiver.js:330:12):8496 [2/22/2021, 11:58:00 AM] ERROR: TypeError: Cannot read property 'type' of undefined
+TypeError: Cannot read property 'type' of undefined
+    at approved (C:\Users\Administrator\Desktop\KKuTu\Server\lib\Game\games\classic.js:255:15)
+    at preApproved (C:\Users\Administrator\Desktop\KKuTu\Server\lib\Game\games\classic.js:279:9)
+    at onDB (C:\Users\Administrator\Desktop\KKuTu\Server\lib\Game\games\classic.js:298:39)
+    at callback (C:\Users\Administrator\Desktop\KKuTu\Server\lib\sub\collection.js:316:13)
+    at Result.preCB (C:\Users\Administrator\Desktop\KKuTu\Server\lib\sub\collection.js:298:6)
+    at Result.Query.handleReadyForQuery (C:\Users\Administrator\Desktop\KKuTu\Server\lib\node_modules\pg\lib\query.js:144:10)
+    at Connection.<anonymous> (C:\Users\Administrator\Desktop\KKuTu\Server\lib\node_modules\pg\lib\client.js:180:19)
+    at Connection.emit (events.js:210:5)
+    at Socket.<anonymous> (C:\Users\Administrator\Desktop\KKuTu\Server\lib\node_modules\pg\lib\connection.js:133:12)
+    at Socket.emit (events.js:210:5):8496 [2/22/2021, 11:58:58 AM] ERROR: TypeError: Cannot read property 'type' of undefined
+TypeError: Cannot read property 'type' of undefined
+    at approved (C:\Users\Administrator\Desktop\KKuTu\Server\lib\Game\games\classic.js:255:15)
+    at preApproved (C:\Users\Administrator\Desktop\KKuTu\Server\lib\Game\games\classic.js:279:9)
+    at onDB (C:\Users\Administrator\Desktop\KKuTu\Server\lib\Game\games\classic.js:298:39)
+    at callback (C:\Users\Administrator\Desktop\KKuTu\Server\lib\sub\collection.js:316:13)
+    at Result.preCB (C:\Users\Administrator\Desktop\KKuTu\Server\lib\sub\collection.js:298:6)
+    at Result.Query.handleReadyForQuery (C:\Users\Administrator\Desktop\KKuTu\Server\lib\node_modules\pg\lib\query.js:144:10)
+    at Connection.<anonymous> (C:\Users\Administrator\Desktop\KKuTu\Server\lib\node_modules\pg\lib\client.js:180:19)
+    at Connection.emit (events.js:210:5)
+    at Socket.<anonymous> (C:\Users\Administrator\Desktop\KKuTu\Server\lib\node_modules\pg\lib\connection.js:133:12)
+    at Socket.emit (events.js:210:5):8496 [2021-2-22 13:15:30] ERROR: ReferenceError: shuffle is not defined
+ReferenceError: shuffle is not defined
+    at C:\Users\Administrator\Desktop\KKuTu\Server\lib\Game\games\classic.js:87:5
+    at callback (C:\Users\Administrator\Desktop\KKuTu\Server\lib\sub\collection.js:316:13)
+    at Result.preCB (C:\Users\Administrator\Desktop\KKuTu\Server\lib\sub\collection.js:298:6)
+    at Result.Query.handleReadyForQuery (C:\Users\Administrator\Desktop\KKuTu\Server\lib\node_modules\pg\lib\query.js:144:10)
+    at Connection.<anonymous> (C:\Users\Administrator\Desktop\KKuTu\Server\lib\node_modules\pg\lib\client.js:180:19)
+    at Connection.emit (events.js:210:5)
+    at Socket.<anonymous> (C:\Users\Administrator\Desktop\KKuTu\Server\lib\node_modules\pg\lib\connection.js:133:12)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11):8496 [2021-2-22 13:22:40] ERROR: ReferenceError: shuffle is not defined
+ReferenceError: shuffle is not defined
+    at C:\Users\Administrator\Desktop\KKuTu\Server\lib\Game\games\classic.js:87:5
+    at callback (C:\Users\Administrator\Desktop\KKuTu\Server\lib\sub\collection.js:316:13)
+    at Result.preCB (C:\Users\Administrator\Desktop\KKuTu\Server\lib\sub\collection.js:298:6)
+    at Result.Query.handleReadyForQuery (C:\Users\Administrator\Desktop\KKuTu\Server\lib\node_modules\pg\lib\query.js:144:10)
+    at Connection.<anonymous> (C:\Users\Administrator\Desktop\KKuTu\Server\lib\node_modules\pg\lib\client.js:180:19)
+    at Connection.emit (events.js:210:5)
+    at Socket.<anonymous> (C:\Users\Administrator\Desktop\KKuTu\Server\lib\node_modules\pg\lib\connection.js:133:12)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11):8496 [2021-2-22 13:24:20] ERROR: ReferenceError: shuffle is not defined
+ReferenceError: shuffle is not defined
+    at C:\Users\Administrator\Desktop\KKuTu\Server\lib\Game\games\classic.js:87:5
+    at callback (C:\Users\Administrator\Desktop\KKuTu\Server\lib\sub\collection.js:316:13)
+    at Result.preCB (C:\Users\Administrator\Desktop\KKuTu\Server\lib\sub\collection.js:298:6)
+    at Result.Query.handleReadyForQuery (C:\Users\Administrator\Desktop\KKuTu\Server\lib\node_modules\pg\lib\query.js:144:10)
+    at Connection.<anonymous> (C:\Users\Administrator\Desktop\KKuTu\Server\lib\node_modules\pg\lib\client.js:180:19)
+    at Connection.emit (events.js:210:5)
+    at Socket.<anonymous> (C:\Users\Administrator\Desktop\KKuTu\Server\lib\node_modules\pg\lib\connection.js:133:12)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11):8496 [2021-3-14 23:45:40] ERROR: ReferenceError: opts is not defined
+ReferenceError: opts is not defined
+    at getRewards (C:\Users\Administrator\Desktop\KKuTu\Server\lib\Game\kkutu.js:1395:2)
+    at exports.Room.my.roundEnd (C:\Users\Administrator\Desktop\KKuTu\Server\lib\Game\kkutu.js:1205:9)
+    at exports.Room.exports.roundReady (C:\Users\Administrator\Desktop\KKuTu\Server\lib\Game\games\classic.js:147:6)
+    at exports.Room.my.route.my.routeSync (C:\Users\Administrator\Desktop\KKuTu\Server\lib\Game\kkutu.js:1340:13)
+    at Timeout.my.roundReady (C:\Users\Administrator\Desktop\KKuTu\Server\lib\Game\kkutu.js:1146:13)
+    at listOnTimeout (internal/timers.js:531:17)
+    at processTimers (internal/timers.js:475:7):8496 [2021-3-14 23:50:51] ERROR: ReferenceError: opts is not defined
+ReferenceError: opts is not defined
+    at getRewards (C:\Users\Administrator\Desktop\KKuTu\Server\lib\Game\kkutu.js:1395:2)
+    at exports.Room.my.roundEnd (C:\Users\Administrator\Desktop\KKuTu\Server\lib\Game\kkutu.js:1205:9)
+    at exports.Room.exports.roundReady (C:\Users\Administrator\Desktop\KKuTu\Server\lib\Game\games\classic.js:147:6)
+    at exports.Room.my.route.my.routeSync (C:\Users\Administrator\Desktop\KKuTu\Server\lib\Game\kkutu.js:1340:13)
+    at Timeout.my.roundReady (C:\Users\Administrator\Desktop\KKuTu\Server\lib\Game\kkutu.js:1146:13)
+    at listOnTimeout (internal/timers.js:531:17)
+    at processTimers (internal/timers.js:475:7):8496 [2021-3-14 23:58:46] ERROR: TypeError: Cannot read property 'returns' of undefined
+TypeError: Cannot read property 'returns' of undefined
+    at getRewards (C:\Users\Administrator\Desktop\KKuTu\Server\lib\Game\kkutu.js:1395:11)
+    at exports.Room.my.roundEnd (C:\Users\Administrator\Desktop\KKuTu\Server\lib\Game\kkutu.js:1205:9)
+    at exports.Room.exports.roundReady (C:\Users\Administrator\Desktop\KKuTu\Server\lib\Game\games\classic.js:147:6)
+    at exports.Room.my.route.my.routeSync (C:\Users\Administrator\Desktop\KKuTu\Server\lib\Game\kkutu.js:1340:13)
+    at Timeout.my.roundReady (C:\Users\Administrator\Desktop\KKuTu\Server\lib\Game\kkutu.js:1146:13)
+    at listOnTimeout (internal/timers.js:531:17)
+    at processTimers (internal/timers.js:475:7)

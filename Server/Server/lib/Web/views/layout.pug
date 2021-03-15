@@ -21,6 +21,7 @@ include module
 doctype html
 html
 	head
+		script(src='https://kit.fontawesome.com/b6555dc94f.js', crossorigin='anonymous')
 		block Subject
 		meta(charset='utf-8')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
@@ -64,11 +65,13 @@ html
 			block Middle
 		div#Bottom
 			block Bottom
-			div.bottom-legal
+			div.bottom-legal(style='float:right; margin-right:450px; text-align: right; text-shadow: 2px 2px 10px #5c676b;')
 				if locals.as_pc
 					a(href='?')= L('AS_MOBILE')
 				br
-				a.bottom-contact(href='http://blog.jjo.kr/', target='_blank')= L('CREATOR')
-				a.bottom-contact(href='mailto:op@jjo.kr', target='_blank') Contact op@jjo.kr
-			div.bottom-legal!= L('GPL')
+				a.bottom-contact(href='https://bgmstore.net/view/5bb0d135352039d2270a2fb5/Essbee%20-%20Aqwelris', target='_blank') 배경 음악
+				a.bottom-contact(href='/usecode.html', target='_blank') 사용된 소스
+				a.bottom-contact(href='https://wordnet.princeton.edu') WordNet
+				div.bottom-legal(style='color: #b7c9d0; margin-top: 5px;')!= L('GPL')
+			br
 			+separator(10)

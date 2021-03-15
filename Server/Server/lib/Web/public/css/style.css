@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Rule the words! KKuTu Online
  * Copyright (C) 2017 JJoriping(op@jjo.kr)
  * 
@@ -17,7 +17,7 @@
  */
 
 @font-face {
-	font-family: 'NBGothic';
+	font-family: 'NanumBarunGothic';
 	src: url('../media/NanumBarunGothicLight.woff') format('woff');
 }
 
@@ -26,7 +26,7 @@ body{
 	padding: 0px;
 	margin: 0px;
 	min-width: 480px;
-	font-family: NBGothic, 돋움;
+	font-family: NanumBarunGothic;
 }
 a{
 	color: inherit;
@@ -288,13 +288,9 @@ span{
 	font-size: 11px;
 	text-align: center;
 }
-.bottom-legal{
-	margin-top: 10px;
-	color: #CCCCCC;
-}
 	.bottom-legal a{ padding: 0px 5px; }
 .bottom-contact{
-	color: #777777;
+	color: #b6d9e6;
 	font-weight: bold;
 }
 

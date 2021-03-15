@@ -54,6 +54,9 @@ function useItem($user, $item, gid){
 	var R = { gain: [] };
 	
 	switch($item._id){
+		case 'boxB1':
+			got(pick([ 'b4_bb', 'b4_hongsi', 'b4_mint', 'b4_bb', 'b4_hongsi', 'b3_do', 'b3_hwa', 'b3_pok', 'b2_fire', 'b2_metal']), 1, 604800);
+			break;
 		case 'boxB2':
 			got(pick([ 'b2_fire', 'b2_metal' ]), 1, 604800);
 			break;

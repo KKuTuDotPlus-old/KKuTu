@@ -41,4 +41,3 @@ module.exports.strategy = (process, MainDB, Ajae) => {
 
         process(req, accessToken, MainDB, $p, done);
     } // example naver
-}

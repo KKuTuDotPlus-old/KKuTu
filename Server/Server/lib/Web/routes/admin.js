@@ -29,7 +29,9 @@ Server.get("/gwalli", function(req, res){
 	
 	req.session.admin = true;
 	page(req, res, "gwalli");
+
 });
+
 Server.get("/gwalli/injeong", function(req, res){
 	if(!checkAdmin(req, res)) return;
 	
