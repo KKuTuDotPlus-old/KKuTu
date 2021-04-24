@@ -3,11 +3,12 @@
 	* [JJoriping](http://blog.jjo.kr/)
 - 🌎 바로 가기 :
 	* [KKuTuDotPlus](https://kkutu.plus)
-	* [DesignSupport](https://kkutu.plus/designSupport.html)
+	~~* [DesignSupport](https://kkutu.plus/designSupport.html)~~ 준비중
 	* [Discord](https://discord.gg/k9wJkQmKvY)
+	* [Cafe](https://cafe.naver.com/kkutudotplus)
 ## ⚠️ 알립니다 !
 - 끄투닷플러스의 허가 없이 이 레포지토리를 참고,사용하거나 리소스를 사용하지 마세요.
-	* 끄투닷플러스에서 무료로 제공하는 리소스 다운로드 : [DesignSupport](https://kkutu.plus/designSupport.html)
+	* 끄투닷플러스에서 무료로 제공하는 리소스 다운로드 : ~~[DesignSupport](https://kkutu.plus/designSupport.html)~~ 준비중
 
 ## 한국어
 **글자에 즐거움을 더합니다. 끄투닷플러스**
